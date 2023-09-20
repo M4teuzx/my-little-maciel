@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "My little maciel",
+    "version": "6.9",
+    "description": "Cuide do seu próprio maciel!",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "./rostos/feliz.png"
+        }
+    },
+    "icons": {
+        "16": "./rostos/feliz.png"
+    }
+}
