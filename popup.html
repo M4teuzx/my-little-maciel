@@ -20,16 +20,29 @@
 
     <div id="loja-container">
         <button id="voltar"></button>
-        <button id="chapeu-1">chapéu chique</button>
-        <button id="chapeu-2">boné d cria</button>
-        <button id="chapeu-3">taylor swift</button>
-        <button id="chapeu-4">diabinho</button>
-        <button id="chapeu-5">Bandidah</button>
+        <p>Chapéus</p>
+        <div id="chapeu-container">
+            <button class="botaoloja" id="remover" disabled value="0"></button>
+            <button class="botaoloja" id="chapeu-1" disabled value="10"></button>
+            <button class="botaoloja" id="chapeu-2" disabled value="20"></button>
+            <button class="botaoloja" id="chapeu-3" disabled value="30"></button>
+            <button class="botaoloja" id="chapeu-4" disabled value="40"></button>
+            <button class="botaoloja" id="chapeu-5" disabled value="100"></button>
+            <button class="botaoloja" id="chapeu-6" disabled value="100"></button>
+        </div>
         <p>fundos</p>
-        <button id="fundo-1">padrão</button>
-        <button id="fundo-2">gay</button>
-        <button id="fundo-3">tyler the creator</button>
-        <button id="fundo-4">lana del rey</button>
+        <div id="fundo-container">
+            <button class="botaoloja" id="fundo-1">padrão</button>
+            <button class="botaoloja" id="fundo-2" value="10" disabled>gay</button>
+            <button class="botaoloja" id="fundo-3" value="20" disabled>tyler the creator</button>
+            <button class="botaoloja" id="fundo-4" value="30" disabled>lana del rey</button>
+            <button class="botaoloja" id="fundo-5" value="40" disabled>maciel</button>
+            <button class="botaoloja" id="fundo-6" value="50" disabled>maciel</button>
+            <button class="botaoloja" id="fundo-7" value="60" disabled>maciel</button>
+            <button class="botaoloja" id="fundo-8" value="80" disabled>maciel</button>
+            <button class="botaoloja" id="fundo-9" value="90" disabled>maciel</button>
+            <button class="botaoloja" id="fundo-10" value="100" disabled>maciel</button>
+        </div>
     </div>
     <div id="pet-container">
         <div id="fezes-container">
@@ -46,11 +59,11 @@
             <div id="progress-bar">
                 <div id="progress-sono"></div>
             </div>
-            <p>Diversao:</p>
+            <p>Diversão:</p>
             <div id="progress-bar">
                 <div id="progress-amor"></div>
             </div>
-            <p>Saude:</p>
+            <p>Saúde:</p>
             <div id="progress-bar">
                 <div id="progress-saude"></div>
             </div>
@@ -67,10 +80,11 @@
             <button class="button" id="banho"></button>
             <button class="button" id="espancar"></button>
             <button class="button" id="suicidio"></button>
+            <button class="button" id="lana"></button>
+            <button class="button" id="tyler"></button>
         </div>
         <button id="loja"></button>
-        <button id="lana" style="display: none;">CANTAR</button>
-        <button id="tyler"style="display: none;">tyler</button>
+        
         <audio id="audio-alimentar">
             <source src="./audios/comida.mp3" type="audio/mpeg">
         </audio>

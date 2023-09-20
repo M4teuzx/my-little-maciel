@@ -13,7 +13,6 @@ const progressAmor = document.getElementById('progress-amor');
 const progressSaude = document.getElementById('progress-saude');
 const progressBanho = document.getElementById('progress-banho');
 
-
 const audioAlimentar = document.getElementById('audio-alimentar');
 const audioBrincar = document.getElementById('audio-brincar');
 const audioDormir = document.getElementById('audio-dormir');
@@ -23,19 +22,18 @@ const audioEspancar = document.getElementById('audio-espancar');
 const audioSuicidio = document.getElementById('audio-suicidio');
 const audioinicial = document.getElementById('audio-inicio');
 
-
 const loja = document.getElementById('loja');
 const petcontainer = document.getElementById('pet-container');
 const lojacontainer = document.getElementById('loja-container');
 const voltar = document.getElementById('voltar');
 
-
+const remover = document.getElementById('remover');
 const chapeu1 = document.getElementById('chapeu-1');
 const chapeu2 = document.getElementById('chapeu-2');
 const chapeu3 = document.getElementById('chapeu-3');
 const chapeu4 = document.getElementById('chapeu-4');
 const chapeu5 = document.getElementById('chapeu-5');
-
+const chapeu6 = document.getElementById('chapeu-6');
 
 const petHat = document.getElementById('hat');
 const petall = document.getElementById('pet-top');
@@ -43,7 +41,12 @@ const fundo1 = document.getElementById('fundo-1');
 const fundo2 = document.getElementById('fundo-2');
 const fundo3 = document.getElementById('fundo-3');
 const fundo4 = document.getElementById('fundo-4');
-
+const fundo5 = document.getElementById('fundo-5');
+const fundo6 = document.getElementById('fundo-6');
+const fundo7 = document.getElementById('fundo-7');
+const fundo8 = document.getElementById('fundo-8');
+const fundo9 = document.getElementById('fundo-9');
+const fundo10 = document.getElementById('fundo-10');
 
 const lana = document.getElementById('lana');
 const audiolana = document.getElementById('audio-lana');
@@ -52,34 +55,49 @@ const tyler = document.getElementById('tyler');
 
 // loja //
 
-fundo2.disabled = true;
-fundo3.disabled = true;
-fundo4.disabled = true;
-chapeu1.disabled = true;
-chapeu2.disabled = true;
-chapeu3.disabled = true;
-chapeu4.disabled = true;
-
-
 function lojaitens(){
-    if(pontos > 10){
+    if(pontos > 0){
+        remover.disabled = false;
+    }
+    if(pontos > 40){
         fundo2.disabled = false;
         chapeu1.disabled = false;
+        fundo5.disabled = false;
+        fundo6.disabled = false;
+        fundo7.disabled = false;
+        fundo8.disabled = false;
+        fundo9.disabled = false;
+        fundo10.disabled = false;   
+
+
     }
-    if(pontos > 15){
+    if(pontos > 20){
         chapeu2.disabled = false;
         fundo3.disabled = false;
     }
-    if(pontos > 20){
+    if(pontos > 30){
         chapeu3.disabled = false;
         fundo4.disabled = false;
     }
-    if(pontos > 30){
+    if(pontos > 50){
         chapeu4.disabled = false;
+        chapeu5.disabled = false;
+        chapeu6.disabled = false;
     }
 
 }
 
+const buttons = document.querySelectorAll('.botaoloja');
+
+buttons.forEach((button) => {
+  if (button.hasAttribute('disabled')) {
+    const buttonText = button.textContent;
+    const buttonValue = button.getAttribute('value');
+    const overlay = document.createElement('div');
+    overlay.className = 'button-overlay';
+    button.appendChild(overlay);
+  }
+});
 
 
 let pontos = 0;
@@ -102,10 +120,6 @@ function atualizarPontos() {
 
 function salvarPontos() {
     localStorage.setItem('pontos', pontos);
-}
-
-function salvarchapeu() {
-    localStorage.setItem('chapeu', chapeuselecionado);
 }
 
 function salvarfundo() {
@@ -149,20 +163,31 @@ let sono = 20;
 let saude = 40;
 let banho = 100;
 
-
 function setFundo(classeFundo) {
     document.body.classList.remove('fundo1');
     document.body.classList.remove('fundo2');
     document.body.classList.remove('fundo3');
     document.body.classList.remove('fundo4');
+    document.body.classList.remove('fundo5');
+    document.body.classList.remove('fundo6');
+    document.body.classList.remove('fundo7');
+    document.body.classList.remove('fundo8');
+    document.body.classList.remove('fundo9');
+    document.body.classList.remove('fundo10');
     document.body.classList.add(classeFundo);
+
 }
+
+remover.addEventListener('click', function () {
+    petHat.src = './chapeus/nenhum.png';
+});
 
 chapeu1.addEventListener('click', function () {
     petHat.src = './chapeus/hat1.png';
     petHat.style.display = 'block';
     chapeuSelecionado = './chapeus/hat1.png';
     localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
 });
 
 chapeu2.addEventListener('click', function () {
@@ -170,6 +195,7 @@ chapeu2.addEventListener('click', function () {
     petHat.style.display = 'block';
     chapeuSelecionado = './chapeus/hat2.png'; 
     localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
 });
 
 chapeu3.addEventListener('click', function () {
@@ -177,6 +203,7 @@ chapeu3.addEventListener('click', function () {
     petHat.style.display = 'block';
     chapeuSelecionado = './chapeus/hat3.png'; 
     localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
 });
 
 chapeu4.addEventListener('click', function () {
@@ -184,6 +211,7 @@ chapeu4.addEventListener('click', function () {
     petHat.style.display = 'block';
     chapeuSelecionado = './chapeus/hat4.png'; 
     localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
 });
 
 chapeu5.addEventListener('click', function () {
@@ -191,11 +219,20 @@ chapeu5.addEventListener('click', function () {
     petHat.style.display = 'block';
     chapeuSelecionado = './chapeus/hat5.png'; 
     localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
+});
+
+chapeu6.addEventListener('click', function () {
+    petHat.src = './chapeus/hat6.png';
+    petHat.style.display = 'block';
+    chapeuSelecionado = './chapeus/hat6.png';
+    localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
 });
 
 fundo1.addEventListener('click', function () {
     setFundo('fundo1');
-    removeeaster()
+    removeeaster();
     fundoSelecionado = 'fundo1';
     salvarfundo();
 });
@@ -223,12 +260,57 @@ fundo4.addEventListener('click', function () {
     salvarfundo();
 });
 
+fundo5.addEventListener('click', function () {
+    setFundo('fundo5');
+    removeeaster()
+    fundoSelecionado = 'fundo5';
+    salvarfundo();
+});
+
+fundo6.addEventListener('click', function () {
+    setFundo('fundo6');
+    removeeaster()
+    fundoSelecionado = 'fundo6';
+    salvarfundo();
+});
+
+fundo7.addEventListener('click', function () {
+    setFundo('fundo7');
+    removeeaster()
+    fundoSelecionado = 'fundo7';
+    salvarfundo();
+});
+
+fundo8.addEventListener('click', function () {
+    setFundo('fundo8');
+    removeeaster()
+    fundoSelecionado = 'fundo8';
+    salvarfundo();
+});
+
+fundo9.addEventListener('click', function () {
+    setFundo('fundo9');
+    removeeaster()
+    fundoSelecionado = 'fundo9';
+    salvarfundo();
+});
+
+fundo10.addEventListener('click', function () {
+    setFundo('fundo10');
+    removeeaster()
+    fundoSelecionado = 'fundo10';
+    salvarfundo();
+});
+
 function eastereggs(){
     if(fundoSelecionado == 'fundo4'){
-        document.getElementById('lana').style.display = 'block';
+        document.getElementById('lana').style.display = 'inline-block';
     }
     if(fundoSelecionado == 'fundo3'){
-        document.getElementById('tyler').style.display = 'block';
+        document.getElementById('tyler').style.display = 'inline-block';
+    }
+    if(chapeuSelecionado == './chapeus/hat6.png'){
+        document.getElementById('suicidio').style.display = 'inline-block';
     }
 }
 
@@ -336,6 +418,7 @@ function atualizarBanho() {
 function removeeaster() {
     document.getElementById('lana').style.display = 'none';
     document.getElementById('tyler').style.display = 'none';
+    document.getElementById('suicidio').style.display = 'none';
 }
 
 function atualizarExpressaoPet() {
@@ -435,18 +518,32 @@ loja.addEventListener('click', function () {
     petcontainer.style.display = 'none';
     lojacontainer.style.display = 'block';
     acaoEmAndamento = true;
+    estanaloja = true;
 });
 
 voltar.addEventListener('click', function () {
     petcontainer.style.display = 'block';
     lojacontainer.style.display = 'none';
     acaoEmAndamento = false;
+    estanaloja = false;
 });
 
 lana.addEventListener('click', function () {
     audiolana.play();
     cantar();
 });
+
+
+let estanaloja = false;
+
+function backgroundloja() {
+    if (!estanaloja) {
+        setFundo(fundoSelecionado);
+    }
+    if (estanaloja){
+        setFundo('fundo1');
+    }
+}
 
 function cantar() {
     acaoEmAndamento = true;
@@ -551,3 +648,4 @@ setInterval(lojaitens, 1);
 setInterval(verificarRequisitos, 1000);
 setInterval(salvarPontos, 10);
 setInterval(eastereggs, 50);
+setInterval(backgroundloja, 1);

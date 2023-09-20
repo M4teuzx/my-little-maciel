@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "My little maciel",
-    "version": "6.9",
+    "name": "My Little Maciel",
+    "version": "1.0",
     "description": "Cuide do seu próprio maciel!",
     "permissions": [],
     "action": {

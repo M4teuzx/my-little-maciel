@@ -1,8 +1,5 @@
 body {
     width: 300px;
-    cursor: url('./rostos/feliz.png'), auto;
-
-
 }
 
 .escuro {
@@ -66,6 +63,8 @@ body {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    display: inline-block;
+
     
 }
 
@@ -157,7 +156,43 @@ body {
 }
 
 .fundo4 {
-    background-image: url("./background/background-lana.png");
+    background-image: url("https://preview.redd.it/i-feel-like-such-a-loser-but-i-had-so-much-fun-making-this-v0-rccknmattcka1.png?width=400&format=png&auto=webp&s=11e97e3acaa324b7f51c164051247341e2ff346c");
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fundo5 {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20210507/pngtree-aesthetic-fluid-wallpaper-in-green-pastel-colors-image_705259.jpg");
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fundo6 {
+    background-image: url("https://images.rawpixel.com/image_400/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3Y5MDMtdGVjaGktMzRfMV8xLmpwZw.jpg");
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fundo7 {
+    background-image: url("https://img.freepik.com/premium-photo/anime-landscape-wallpapers-iphone-is-best-high-definition-iphone-wallpaper-you-can-make-this-wallpaper-your-iphone-x-backgrounds-mobile-screensaver-ipad-lock-screen-iphone-wall_873925-19600.jpg");
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fundo8 {
+    background-image: url("https://i.pinimg.com/736x/52/a9/4f/52a94fdd2d5b6c5f4b1478980efb34ed.jpg");
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fundo9 {
+    background-image: url("https://media.idownloadblog.com/wp-content/uploads/2014/10/iPad-Air-Advertising-Wallpaper-Green-Jason-Zigrino.jpg");
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.fundo10 {
+    background-image: url("https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Lobo6.jpg");
     background-size: 100% 100%;
     color: #fff;
 }
@@ -238,31 +273,6 @@ body {
     background-color: #eef351;
 }
 
-#espancar{
-    background-image: url('./botoes/espancar.png');
-    background-size: cover;
-    width: 50px;
-    height: 50px; 
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
-    background-color: #531111;
-
-}
-
-#suicidio{
-    background-image: url('./botoes/suicidio.png');
-    background-size: cover;
-    width: 50px;
-    height: 50px; 
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
-    background-color: #000;
-}
-
 #botoes{
     margin-top: 15px;
 }
@@ -290,3 +300,318 @@ body {
     text-align: center;
     line-height: 50px;
 }
+
+/* Adicione isso ao seu arquivo de estilo CSS ou dentro de uma tag <style> no seu HTML */
+.botaoloja[disabled] {
+    position: relative;
+  }
+  
+.botaoloja[disabled]::after {
+    content: attr(value);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+#chapeu-container, #fundo-container  {
+    width: 100%; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    background-color: #ffffff;
+    padding: 10px;
+  }
+
+.botaoloja {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+#remover{
+    background-image: url('./chapeus/remover.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;    
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+#chapeu-1{
+    background-image: url('./chapeus/hat1.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;    
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+#chapeu-2{
+    background-image: url('./chapeus/hat2.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+#chapeu-3{
+    background-image: url('./chapeus/hat3.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+#chapeu-4{
+    background-image: url('./chapeus/hat4.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+#chapeu-5{
+    background-image: url('./chapeus/hat5.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+#chapeu-6{
+    background-image: url('./chapeus/hat6.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+
+}
+
+
+#fundo-1{
+    background-image: url('./background/background1.png');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+}
+
+#fundo-2{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gay_Pride_Flag.svg/640px-Gay_Pride_Flag.svg.png');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+}
+
+#fundo-3{
+    background-image: url('https://wallpapercave.com/wp/wp6159305.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+}
+
+#fundo-4{
+    background-image: url('https://preview.redd.it/i-feel-like-such-a-loser-but-i-had-so-much-fun-making-this-v0-rccknmattcka1.png?width=400&format=png&auto=webp&s=11e97e3acaa324b7f51c164051247341e2ff346c');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+
+}
+
+#fundo-5{
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20210507/pngtree-aesthetic-fluid-wallpaper-in-green-pastel-colors-image_705259.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+
+}
+
+#fundo-6{
+    background-image: url('https://images.rawpixel.com/image_400/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3Y5MDMtdGVjaGktMzRfMV8xLmpwZw.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+
+}
+
+#fundo-7{
+    background-image: url('https://img.freepik.com/premium-photo/anime-landscape-wallpapers-iphone-is-best-high-definition-iphone-wallpaper-you-can-make-this-wallpaper-your-iphone-x-backgrounds-mobile-screensaver-ipad-lock-screen-iphone-wall_873925-19600.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+
+}
+
+#fundo-8{
+    background-image: url('https://i.pinimg.com/736x/52/a9/4f/52a94fdd2d5b6c5f4b1478980efb34ed.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    border: #000 2px solid;
+
+}
+
+#fundo-9{
+    background-image: url('https://media.idownloadblog.com/wp-content/uploads/2014/10/iPad-Air-Advertising-Wallpaper-Green-Jason-Zigrino.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#fundo-10{
+    background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Lobo6.jpg');
+    background-size: cover;
+    width: 110px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#lana{
+    background-image: url('./botoes/lana.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c671ff;
+    display: none;
+}
+
+#tyler{
+    background-image: url('./botoes/tyler.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #ffb14b;
+    display: none;
+}
+
+#suicidio{
+    background-image: url('./botoes/suicidio.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px; 
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #000;
+    display: none;
+}
+
+#espancar{
+    background-image: url('./botoes/espancar.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px; 
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #531111;
+    display: none;
+}
+
