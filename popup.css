@@ -1,5 +1,6 @@
 body {
     width: 300px;
+
 }
 
 .escuro {
@@ -12,7 +13,6 @@ body {
 }
 
 #progress-bar {
-    
     width: 150px;
     background-color: #ccc; 
     margin: 0 auto;
@@ -57,15 +57,19 @@ body {
 
 
 .button {
-    margin-top: 10px;
+    margin-top: 20px;
     border: none;
-    background-color: #6a6af6;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
+    background-size: cover;
+    width: 40px;
+    height: 40px; 
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
 
-    
 }
 
 #loja, #voltar {
@@ -169,6 +173,7 @@ body {
 
 #loja-container {
     display: none;
+
 }
 
 .fundo1 {
@@ -248,24 +253,12 @@ body {
 #alimentar{
     background-image: url('./botoes/alimentar.png');
     background-size: cover;
-    width: 50px;
-    height: 50px; 
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #4caf50;
 }
 
 #brincar{
     background-image: url('./botoes/diversao.png');
     background-size: cover;
-    width: 50px;
-    height: 50px; 
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #af4c74;
 
 }
@@ -273,12 +266,6 @@ body {
 #dormir{
     background-image: url('./botoes/dormir.png');
     background-size: cover;
-    width: 50px;
-    height: 50px; 
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color:#5192f3;
 
 }
@@ -286,24 +273,12 @@ body {
 #banho{
     background-image: url('./botoes/banho.png');
     background-size: cover;
-    width: 50px;
-    height: 50px;  
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #915f22;
 }
 
 #medicar{
     background-image: url('./botoes/saude.png');
     background-size: cover;
-    width: 50px;
-    height: 50px;  
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #eef351;
 }
 
@@ -344,24 +319,30 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.872);
     color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 8px;
+    width: 90px;
+    height: 70px;
     z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 70px;
 }
 
 #chapeu-container, #fundo-container, #sapato-container, #asas-container, #acessorio-container {
-    width: 100%; 
+    width: 300px;
     overflow-x: auto; 
     white-space: nowrap; 
     padding: 10px;
 }
 
+.fundodormir{
+    background-color: #404040;
+}
+
 
 .botaoloja {
-    width: 50px;
-    height: 50px;
     border: none;
     cursor: pointer;
     margin: 10px;
@@ -468,11 +449,63 @@ body {
 
 }
 
+#chapeu-7{
+    background-image: url('./chapeus/hat7.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+}
+
+#chapeu-8{
+    background-image: url('./chapeus/hat8.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+}
+
+#chapeu-9{
+    background-image: url('./chapeus/hat7.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+}
+
+#chapeu-10{
+    background-image: url('./chapeus/hat10.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px;
+    background-color: #c5c5c5;
+    border: #000 2px solid;
+}
+
 
 #fundo-1{
     background-image: url('./background/background1.png');
     background-size: cover;
-    width: 110px;
+    width: 90px;
     height: 70px;  
     border: none;
     cursor: pointer;
@@ -484,8 +517,8 @@ body {
 #fundo-2{
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gay_Pride_Flag.svg/640px-Gay_Pride_Flag.svg.png');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px; 
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -496,8 +529,8 @@ body {
 #fundo-3{
     background-image: url('https://wallpapercave.com/wp/wp6159305.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -508,8 +541,8 @@ body {
 #fundo-4{
     background-image: url('https://preview.redd.it/i-feel-like-such-a-loser-but-i-had-so-much-fun-making-this-v0-rccknmattcka1.png?width=400&format=png&auto=webp&s=11e97e3acaa324b7f51c164051247341e2ff346c');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -521,8 +554,8 @@ body {
 #fundo-5{
     background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20210507/pngtree-aesthetic-fluid-wallpaper-in-green-pastel-colors-image_705259.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -534,8 +567,8 @@ body {
 #fundo-6{
     background-image: url('https://images.rawpixel.com/image_400/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3Y5MDMtdGVjaGktMzRfMV8xLmpwZw.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -547,8 +580,8 @@ body {
 #fundo-7{
     background-image: url('https://img.freepik.com/premium-photo/anime-landscape-wallpapers-iphone-is-best-high-definition-iphone-wallpaper-you-can-make-this-wallpaper-your-iphone-x-backgrounds-mobile-screensaver-ipad-lock-screen-iphone-wall_873925-19600.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px; 
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -560,8 +593,8 @@ body {
 #fundo-8{
     background-image: url('https://i.pinimg.com/736x/52/a9/4f/52a94fdd2d5b6c5f4b1478980efb34ed.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -573,8 +606,8 @@ body {
 #fundo-9{
     background-image: url('https://media.idownloadblog.com/wp-content/uploads/2014/10/iPad-Air-Advertising-Wallpaper-Green-Jason-Zigrino.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px; 
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -586,8 +619,8 @@ body {
 #fundo-10{
     background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Lobo6.jpg');
     background-size: cover;
-    width: 110px;
-    height: 70px;  
+    width: 90px;
+    height: 70px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -1018,12 +1051,6 @@ body {
 #lana{
     background-image: url('./botoes/lana.png');
     background-size: cover;
-    width: 50px;
-    height: 50px;  
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #c671ff;
     display: none;
 }
@@ -1031,12 +1058,6 @@ body {
 #tyler{
     background-image: url('./botoes/tyler.png');
     background-size: cover;
-    width: 50px;
-    height: 50px;  
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #ffb14b;
     display: none;
 }
@@ -1044,12 +1065,6 @@ body {
 #suicidio{
     background-image: url('./botoes/suicidio.png');
     background-size: cover;
-    width: 50px;
-    height: 50px; 
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 2px;
     background-color: #000;
     display: none;
 }

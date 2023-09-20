@@ -235,7 +235,7 @@ let asasSelecionado = '';
 
 
 function verificarRequisitos() {
-    if (fome <= 50 && sono >= 50 && amor >= 50 && saude >= 50 && banho >= 50 && !acaoEmAndamento) {
+    if (fome >= 50 && sono >= 50 && amor >= 50 && saude >= 50 && banho >= 50 && !acaoEmAndamento) {
         pontos++;
         atualizarPontos();
     }
@@ -305,7 +305,7 @@ audioinicial.play();
 
 let acaoEmAndamento = false;
 
-let fome = 30; 
+let fome = 100; 
 let amor = 50;
 let sono = 20;
 let saude = 40;
@@ -322,6 +322,7 @@ function setFundo(classeFundo) {
     document.body.classList.remove('fundo8');
     document.body.classList.remove('fundo9');
     document.body.classList.remove('fundo10');
+    document.body.classList.remove('fundodormir');
     document.body.classList.add(classeFundo);
 
 }
@@ -763,8 +764,8 @@ function habilitabotao(){
 
 
 function atualizarFome() {
-    if (fome > 0) {
-        fome -= 10;
+    if (fome < 100) {
+        fome += 10;
         fome = Math.max(fome, 0); 
         atualizarProgressBar(progressFome, fome);
         atualizarExpressaoPet();
@@ -825,7 +826,7 @@ function espancar() {
 }
 
 function atualizarBanho() {
-    if (banho < 99) {
+    if (banho < 100) {
         acaoEmAndamento = true;
         banho = Math.min(banho, 100);
         atualizarProgressBar(progressBanho, banho);
@@ -840,8 +841,7 @@ function atualizarBanho() {
             petHat.src = chapeuSelecionado;
             asas.src = asasSelecionado;
             sapato.src = sapatoSelecionado;
-            
-            banho = 100;
+            banho = 99;
             habilitabotao();
         }, 5000);
 
@@ -855,26 +855,24 @@ function removeeaster() {
 }
 
 function atualizarExpressaoPet() {
-    if (fome >= 100) {
-        pet.src = './rostos/10.png';
+    if (fome >= 90) {
+        pet.src = './rostos/2.png';
     } else if (fome >= 80) {
-        pet.src = './rostos/9.png';
+        pet.src = './rostos/3.png';
     } else if (fome >= 70) {
-        pet.src = './rostos/8.png';
+        pet.src = './rostos/4.png';
     } else if (fome >= 60) {
-        pet.src = './rostos/7.png';
+        pet.src = './rostos/5.png';
     } else if (fome >= 50) {
         pet.src = './rostos/6.png';
-    } else if (fome >= 40) {
-        pet.src = './rostos/5.png';
     } else if (fome >= 30) {
-        pet.src = './rostos/4.png';
+        pet.src = './rostos/7.png';
     } else if (fome >= 20) {
-        pet.src = './rostos/3.png';
+        pet.src = './rostos/8.png';
     } else if (fome >= 10) {
-        pet.src = './rostos/2.png';
+        pet.src = './rostos/9.png';
     } else if (fome >= 5) {
-        pet.src = './rostos/1.png';
+        pet.src = './rostos/10.png';
     }
 }
 
@@ -993,12 +991,10 @@ function cantar() {
 
 function dormir() {
     acaoEmAndamento = true;
-    document.body.classList.add('escuro');
     pet.src = './rostos/rosto-dormindo.png';
     desabilitabotao();
     setTimeout(() => {
         acaoEmAndamento = false;
-        document.body.classList.remove('escuro');
         pet.src = './rostos/feliz.png';
         sono = 100;
         habilitabotao();
@@ -1008,8 +1004,8 @@ function dormir() {
 
 function aumentarFomeAosPoucos() {
     setInterval(function () {
-        if (fome < 100 && !acaoEmAndamento) {
-            fome += 0.2;
+        if (fome > 0 && !acaoEmAndamento) {
+            fome -= 0.2;
             fome = Math.min(fome, 100); 
             atualizarExpressaoPet();
             atualizarProgressBar(progressFome, fome);
