@@ -13,35 +13,87 @@
         <source src="./audios/soubrunomaciel.mp3" type="audio/mpeg">
     </audio>
     <span id="pontos">0</span></p>
+    
     <div id="pet-top">
-        <img id="hat" src="" alt="Chapéu" class="hat" style="display: none;">
+        <img id="hat" src="" alt="Chapéu" class="hat">
         <img id="pet" src="feliz.png">
+        <img id="asas" src="" class="asas">
+        <img id="sapato" src="" class="sapato">
     </div>
+    <button id="cheat" style="position: absolute; margin-left: 40px; margin-top: 10px;">+</button>
+    <button id="menos" style="position: absolute; margin-left: 40px; margin-top: 30px;">_</button>
+    <img id="acessorio" src="" class="acessorio">
 
     <div id="loja-container">
         <button id="voltar"></button>
         <p>Chapéus</p>
         <div id="chapeu-container">
-            <button class="botaoloja" id="remover" disabled value="0"></button>
-            <button class="botaoloja" id="chapeu-1" disabled value="10"></button>
-            <button class="botaoloja" id="chapeu-2" disabled value="20"></button>
-            <button class="botaoloja" id="chapeu-3" disabled value="30"></button>
-            <button class="botaoloja" id="chapeu-4" disabled value="40"></button>
-            <button class="botaoloja" id="chapeu-5" disabled value="100"></button>
-            <button class="botaoloja" id="chapeu-6" disabled value="100"></button>
+            <button class="botaoloja" id="chapeu-0" disabled value="0"></button>
+            <button class="botaoloja" id="chapeu-1" disabled value="40"></button>
+            <button class="botaoloja" id="chapeu-2" disabled value="50"></button>
+            <button class="botaoloja" id="chapeu-3" disabled value="100"></button>
+            <button class="botaoloja" id="chapeu-4" disabled value="150"></button>
+            <button class="botaoloja" id="chapeu-5" disabled value="150"></button>
+            <button class="botaoloja" id="chapeu-6" disabled value="170 "></button>
+            <button class="botaoloja" id="chapeu-7" disabled value="30"></button>
+            <button class="botaoloja" id="chapeu-8" disabled value="40"></button>
+            <button class="botaoloja" id="chapeu-9" disabled value="50"></button>
+            <button class="botaoloja" id="chapeu-10" disabled value="60"></button>
         </div>
         <p>fundos</p>
         <div id="fundo-container">
             <button class="botaoloja" id="fundo-1">padrão</button>
-            <button class="botaoloja" id="fundo-2" value="10" disabled>gay</button>
-            <button class="botaoloja" id="fundo-3" value="20" disabled>tyler the creator</button>
-            <button class="botaoloja" id="fundo-4" value="30" disabled>lana del rey</button>
-            <button class="botaoloja" id="fundo-5" value="40" disabled>maciel</button>
-            <button class="botaoloja" id="fundo-6" value="50" disabled>maciel</button>
-            <button class="botaoloja" id="fundo-7" value="60" disabled>maciel</button>
-            <button class="botaoloja" id="fundo-8" value="80" disabled>maciel</button>
-            <button class="botaoloja" id="fundo-9" value="90" disabled>maciel</button>
-            <button class="botaoloja" id="fundo-10" value="100" disabled>maciel</button>
+            <button class="botaoloja" id="fundo-2" value="40" disabled></button>
+            <button class="botaoloja" id="fundo-3" value="50" disabled></button>
+            <button class="botaoloja" id="fundo-4" value="100" disabled></button>
+            <button class="botaoloja" id="fundo-5" value="150" disabled></button>
+            <button class="botaoloja" id="fundo-6" value="170" disabled></button>
+            <button class="botaoloja" id="fundo-7" value="350" disabled></button>
+            <button class="botaoloja" id="fundo-8" value="400" disabled></button>
+            <button class="botaoloja" id="fundo-9" value="500" disabled></button>
+            <button class="botaoloja" id="fundo-10" value="600" disabled></button>
+        </div>
+        <p>Sapatos</p>
+        <div id="sapato-container">
+            <button class="botaoloja" id="sapato-0" value="0" disabled></button>
+            <button class="botaoloja" id="sapato-1" value="150" disabled></button>
+            <button class="botaoloja" id="sapato-2" value="170" disabled></button>
+            <button class="botaoloja" id="sapato-3" value="200" disabled></button>
+            <button class="botaoloja" id="sapato-4" value="250" disabled></button>
+            <button class="botaoloja" id="sapato-5" value="350" disabled></button>
+            <button class="botaoloja" id="sapato-6" value="400" disabled></button>
+            <button class="botaoloja" id="sapato-7" value="500" disabled></button>
+            <button class="botaoloja" id="sapato-8" value="600" disabled></button>
+            <button class="botaoloja" id="sapato-9" value="700" disabled></button>
+            <button class="botaoloja" id="sapato-10" value="750" disabled></button>
+        </div>
+        <p>Acessórios</p>
+        <div id="acessorio-container">
+            <button class="botaoloja" id="acessorio-0" value="0" disabled></button>
+            <button class="botaoloja" id="acessorio-1" value="170" disabled></button>
+            <button class="botaoloja" id="acessorio-2" value="200" disabled></button>
+            <button class="botaoloja" id="acessorio-3" value="350" disabled></button>
+            <button class="botaoloja" id="acessorio-4" value="500" disabled></button>
+            <button class="botaoloja" id="acessorio-5" value="600" disabled></button>
+            <button class="botaoloja" id="acessorio-6" value="700" disabled></button>
+            <button class="botaoloja" id="acessorio-7" value="750" disabled></button>
+            <button class="botaoloja" id="acessorio-8" value="800" disabled></button>
+            <button class="botaoloja" id="acessorio-9" value="850" disabled></button>
+            <button class="botaoloja" id="acessorio-10" value="1000" disabled></button>
+        </div>
+        <p>Asas</p>
+        <div id="asas-container">
+            <button class="botaoloja" id="asas-0" value="0" disabled></button>
+            <button class="botaoloja" id="asas-1" value="200" disabled></button>
+            <button class="botaoloja" id="asas-2" value="300" disabled></button>
+            <button class="botaoloja" id="asas-3" value="400" disabled></button>
+            <button class="botaoloja" id="asas-4" value="500" disabled></button>
+            <button class="botaoloja" id="asas-5" value="600" disabled></button>
+            <button class="botaoloja" id="asas-6" value="700" disabled></button>
+            <button class="botaoloja" id="asas-7" value="750" disabled></button>
+            <button class="botaoloja" id="asas-8" value="800" disabled></button>
+            <button class="botaoloja" id="asas-9" value="850" disabled></button>
+            <button class="botaoloja" id="asas-10" value="900" disabled></button>
         </div>
     </div>
     <div id="pet-container">

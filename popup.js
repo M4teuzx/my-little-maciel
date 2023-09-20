@@ -6,6 +6,18 @@ const banhoButton = document.getElementById('banho');
 const medicarButton = document.getElementById('medicar');
 const espancarButton = document.getElementById('espancar');
 const suicidiobutton = document.getElementById('suicidio');
+const cheatButton = document.getElementById('cheat');
+const menos = document.getElementById('menos');
+
+cheatButton.addEventListener('click', function () {
+    pontos = pontos + 100;
+    atualizarPontos();
+});
+
+menos.addEventListener('click', function () {
+    pontos = pontos - 100;
+    atualizarPontos();
+});
 
 const progressFome = document.getElementById('progress');
 const progressSono = document.getElementById('progress-sono');
@@ -27,16 +39,35 @@ const petcontainer = document.getElementById('pet-container');
 const lojacontainer = document.getElementById('loja-container');
 const voltar = document.getElementById('voltar');
 
-const remover = document.getElementById('remover');
+const removechapeu = document.getElementById('chapeu-0');
 const chapeu1 = document.getElementById('chapeu-1');
 const chapeu2 = document.getElementById('chapeu-2');
 const chapeu3 = document.getElementById('chapeu-3');
 const chapeu4 = document.getElementById('chapeu-4');
 const chapeu5 = document.getElementById('chapeu-5');
 const chapeu6 = document.getElementById('chapeu-6');
+const chapeu7 = document.getElementById('chapeu-7');
+const chapeu8 = document.getElementById('chapeu-8');
+const chapeu9 = document.getElementById('chapeu-9');
+const chapeu10 = document.getElementById('chapeu-10');
+
+const sapato = document.getElementById('sapato')
+const sapato0 = document.getElementById('sapato-0');
+const sapato1 = document.getElementById('sapato-1');
+const sapato2 = document.getElementById('sapato-2');
+const sapato3 = document.getElementById('sapato-3');
+const sapato4 = document.getElementById('sapato-4');
+const sapato5 = document.getElementById('sapato-5');
+const sapato6 = document.getElementById('sapato-6');
+const sapato7 = document.getElementById('sapato-7');
+const sapato8 = document.getElementById('sapato-8');
+const sapato9 = document.getElementById('sapato-9');
+const sapato10 = document.getElementById('sapato-10');
 
 const petHat = document.getElementById('hat');
 const petall = document.getElementById('pet-top');
+
+
 const fundo1 = document.getElementById('fundo-1');
 const fundo2 = document.getElementById('fundo-2');
 const fundo3 = document.getElementById('fundo-3');
@@ -48,6 +79,32 @@ const fundo8 = document.getElementById('fundo-8');
 const fundo9 = document.getElementById('fundo-9');
 const fundo10 = document.getElementById('fundo-10');
 
+const acessorio = document.getElementById('acessorio');
+const acessorio0 = document.getElementById('acessorio-0');
+const acessorio1 = document.getElementById('acessorio-1');
+const acessorio2 = document.getElementById('acessorio-2');
+const acessorio3 = document.getElementById('acessorio-3');
+const acessorio4 = document.getElementById('acessorio-4');
+const acessorio5 = document.getElementById('acessorio-5');
+const acessorio6 = document.getElementById('acessorio-6');
+const acessorio7 = document.getElementById('acessorio-7');
+const acessorio8 = document.getElementById('acessorio-8');
+const acessorio9 = document.getElementById('acessorio-9');
+const acessorio10 = document.getElementById('acessorio-10');
+
+const asas = document.getElementById('asas');
+const asas0 = document.getElementById('asas-0');
+const asas1 = document.getElementById('asas-1');
+const asas2 = document.getElementById('asas-2');
+const asas3 = document.getElementById('asas-3');
+const asas4 = document.getElementById('asas-4');
+const asas5 = document.getElementById('asas-5');
+const asas6 = document.getElementById('asas-6');
+const asas7 = document.getElementById('asas-7');
+const asas8 = document.getElementById('asas-8');
+const asas9 = document.getElementById('asas-9');
+const asas10 = document.getElementById('asas-10');
+
 const lana = document.getElementById('lana');
 const audiolana = document.getElementById('audio-lana');
 const tyler = document.getElementById('tyler');
@@ -57,33 +114,102 @@ const tyler = document.getElementById('tyler');
 
 function lojaitens(){
     if(pontos > 0){
-        remover.disabled = false;
+        removechapeu.disabled = false;
+        acessorio0.disabled = false;
+        asas0.disabled = false;
+        sapato0.disabled = false;
     }
     if(pontos > 40){
         fundo2.disabled = false;
-        chapeu1.disabled = false;
-        fundo5.disabled = false;
-        fundo6.disabled = false;
-        fundo7.disabled = false;
-        fundo8.disabled = false;
-        fundo9.disabled = false;
-        fundo10.disabled = false;   
-
-
+        chapeu1.disabled = false;   
     }
-    if(pontos > 20){
+
+    if(pontos > 50){
         chapeu2.disabled = false;
         fundo3.disabled = false;
     }
-    if(pontos > 30){
+    if(pontos > 100){
         chapeu3.disabled = false;
         fundo4.disabled = false;
     }
-    if(pontos > 50){
+    if(pontos > 150){
         chapeu4.disabled = false;
         chapeu5.disabled = false;
-        chapeu6.disabled = false;
+        fundo5.disabled = false;
+        sapato1.disabled = false;
     }
+    if(pontos > 170){
+        acessorio1.disabled = false;
+        chapeu6.disabled = false;
+        fundo6.disabled = false;
+        sapato2.disabled = false;
+    }
+    if(pontos > 200){
+        asas1.disabled = false;
+        acessorio2.disabled = false;
+        sapato3.disabled = false;
+        chapeu7.disabled = false;
+        
+    }
+    if(pontos > 250){
+        sapato4.disabled = false;
+    }
+    if(pontos > 300){
+        asas2.disabled = false;
+        chapeu8.disabled = false;
+    }
+    if(pontos > 350){
+        acessorio3.disabled = false;        
+        fundo7.disabled = false;
+        sapato5.disabled = false;
+
+    }
+    if(pontos > 400){
+        asas3.disabled = false;        
+        fundo8.disabled = false;
+        sapato6.disabled = false;
+
+    }
+    if(pontos > 500){
+        fundo9.disabled = false;
+        asas4.disabled = false;
+        sapato7.disabled = false;
+        acessorio4.disabled = false;
+        chapeu9.disabled = false;
+    }
+    if(pontos > 600){
+        fundo10.disabled = false;
+        asas5.disabled = false;
+        sapato8.disabled = false;
+        acessorio5.disabled = false;
+    }
+    if(pontos > 700){
+        asas6.disabled = false;
+        sapato9.disabled = false;
+        acessorio6.disabled = false;
+    }
+    if(pontos > 750){
+        asas7.disabled = false;
+        sapato10.disabled = false;
+        acessorio7.disabled = false;
+    }
+    if(pontos > 800){
+        asas8.disabled = false;
+        acessorio8.disabled = false;
+        chapeu10.disabled = false;
+    }
+    if(pontos > 850){
+        asas9.disabled = false;
+        acessorio9.disabled = false;
+
+    }
+    if(pontos > 900){
+        asas10.disabled = false;
+    }
+    if(pontos > 1000){
+        acessorio10.disabled = false;
+    }
+
 
 }
 
@@ -101,8 +227,11 @@ buttons.forEach((button) => {
 
 
 let pontos = 0;
-let chapeuselecionado = '';
+let chapeuSelecionado = '';
 let fundoSelecionado = '';
+let sapatoSelecionado = '';
+let acessorioSelecionado = '';
+let asasSelecionado = '';
 
 
 function verificarRequisitos() {
@@ -135,7 +264,7 @@ function carregarPontos() {
 
     const chapeuSalvo = localStorage.getItem('chapeu');
     if (chapeuSalvo !== null) {
-        chapeuselecionado = chapeuSalvo;
+        chapeuSelecionado = chapeuSalvo;
         petHat.src = chapeuSalvo;
         petHat.style.display = 'block';
     }
@@ -145,13 +274,32 @@ function carregarPontos() {
         fundoSelecionado = fundoSalvo;
         setFundo(fundoSalvo);
     }
+
+    const sapatoSalvo = localStorage.getItem('sapato');
+    if (sapatoSalvo !== null) {
+        sapatoSelecionado = sapatoSalvo;
+        sapato.src = sapatoSalvo;
+        sapato.style.display = 'block';
+    }
+
+    const acessorioSalvo = localStorage.getItem('acessorio');
+    if (acessorioSalvo !== null) {
+        acessorioSelecionado = acessorioSalvo;
+        acessorio.src = acessorioSalvo;
+        acessorio.style.display = 'block';
+    }
+
+    const asasSalvo = localStorage.getItem('asas');
+    if (asasSalvo !== null) {
+        asasSelecionado = asasSalvo;
+        asas.src = asasSalvo;
+        asas.style.display = 'block';
+    }
 }
 
 carregarPontos();
 
 atualizarPontos();
-
-
 
 audioinicial.play();
 
@@ -178,7 +326,7 @@ function setFundo(classeFundo) {
 
 }
 
-remover.addEventListener('click', function () {
+removechapeu.addEventListener('click', function () {
     petHat.src = './chapeus/nenhum.png';
 });
 
@@ -302,6 +450,285 @@ fundo10.addEventListener('click', function () {
     salvarfundo();
 });
 
+sapato0.addEventListener('click', function () {
+    sapato.src = './sapatos/nenhum.png';
+    sapato.style.display = 'none';
+    sapatoSelecionado = './sapatos/nenhum.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato1.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato1.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato1.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato2.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato2.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato2.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato3.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato3.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato3.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato4.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato4.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato4.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato5.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato5.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato5.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato6.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato6.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato6.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato7.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato7.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato7.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato8.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato8.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato8.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato9.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato9.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato9.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+sapato10.addEventListener('click', function () {
+    sapato.src = './sapatos/sapato10.png';
+    sapato.style.display = 'block';
+    sapatoSelecionado = './sapatos/sapato10.png';
+    localStorage.setItem('sapato', sapatoSelecionado);
+    removeeaster();
+});
+
+acessorio0.addEventListener('click', function () {
+    acessorio.src = './acessorios/nenhum.png';
+    acessorio.style.display = 'none';
+    acessorioSelecionado = './acessorios/nenhum.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio1.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio1.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio1.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio2.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio2.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio2.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio3.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio3.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio3.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio4.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio4.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio4.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio5.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio5.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio5.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio6.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio6.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio6.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio7.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio7.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio7.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio8.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio8.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio8.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio9.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio9.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio9.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+acessorio10.addEventListener('click', function () {
+    acessorio.src = './acessorios/acessorio10.png';
+    acessorio.style.display = 'block';
+    acessorioSelecionado = './acessorios/acessorio10.png';
+    localStorage.setItem('acessorio', acessorioSelecionado);
+    removeeaster();
+});
+
+asas0.addEventListener('click', function () {
+    asas.src = './asas/nenhum.png';
+    asas.style.display = 'none';
+    asasSelecionado = './asas/nenhum.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas1.addEventListener('click', function () {
+    asas.src = './asas/asas1.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas1.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas2.addEventListener('click', function () {
+    asas.src = './asas/asas2.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas2.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas3.addEventListener('click', function () {
+    asas.src = './asas/asas3.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas3.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas4.addEventListener('click', function () {
+    asas.src = './asas/asas4.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas4.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas5.addEventListener('click', function () {
+    asas.src = './asas/asas5.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas5.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas6.addEventListener('click', function () {
+    asas.src = './asas/asas6.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas6.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas7.addEventListener('click', function () {
+    asas.src = './asas/asas7.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas7.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas8.addEventListener('click', function () {
+    asas.src = './asas/asas8.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas8.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas9.addEventListener('click', function () {
+    asas.src = './asas/asas9.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas9.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+asas10.addEventListener('click', function () {
+    asas.src = './asas/asas10.png';
+    asas.style.display = 'block';
+    asasSelecionado = './asas/asas10.png';
+    localStorage.setItem('asas', asasSelecionado);
+    removeeaster();
+});
+
+
+acessorio.addEventListener('click', function () {
+    acessorio.classList.add('jump');
+    setTimeout(function () {
+        acessorio.classList.remove('jump');
+    }
+    , 500); 
+});
+
+
+
+
+
+
+
 function eastereggs(){
     if(fundoSelecionado == 'fundo4'){
         document.getElementById('lana').style.display = 'inline-block';
@@ -404,10 +831,16 @@ function atualizarBanho() {
         atualizarProgressBar(progressBanho, banho);
         pet.src = './rostos/banho.png';
         desabilitabotao();
-        petHat.style.display = 'none';
+        petHat.src = './chapeus/nenhum.png';
+        asas.src = './asas/nenhum.png';
+        sapato.src = './sapatos/nenhum.png';
         setTimeout(function () {
             acaoEmAndamento = false;
             pet.src = './rostos/feliz.png';
+            petHat.src = chapeuSelecionado;
+            asas.src = asasSelecionado;
+            sapato.src = sapatoSelecionado;
+            
             banho = 100;
             habilitabotao();
         }, 5000);

@@ -125,8 +125,41 @@ body {
     width: 50px;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 49.5%;
     transform: translateX(-50%);
+    display: none;
+}
+
+#sapato {
+    width: 50px;
+    position: absolute;
+    top: 40px;
+    left: 49.5%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#acessorio {
+    width: 40px;
+    position: absolute;
+    top: 60px;
+    left: 70%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#asas {
+    width: 100px;
+    position: absolute;
+    top: -5px;
+    left: 49.5%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: -1;
+}
+
+#acessorio:hover {
+    cursor: pointer;
 }
 
 #pet {
@@ -200,7 +233,7 @@ body {
 #fezes-container {
     text-align: center;
     position: absolute;
-    top: 80px;
+    top: 85px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -209,6 +242,7 @@ body {
     width: 20px;
     margin: 0 5px;
     float: left;
+    z-index: 4;
 }
 
 #alimentar{
@@ -301,7 +335,6 @@ body {
     line-height: 50px;
 }
 
-/* Adicione isso ao seu arquivo de estilo CSS ou dentro de uma tag <style> no seu HTML */
 .botaoloja[disabled] {
     position: relative;
   }
@@ -318,13 +351,13 @@ body {
     z-index: 1;
 }
 
-#chapeu-container, #fundo-container  {
+#chapeu-container, #fundo-container, #sapato-container, #asas-container, #acessorio-container {
     width: 100%; 
     overflow-x: auto; 
     white-space: nowrap; 
-    background-color: #ffffff;
     padding: 10px;
-  }
+}
+
 
 .botaoloja {
     width: 50px;
@@ -337,7 +370,7 @@ body {
     display: inline-block;
 }
 
-#remover{
+#chapeu-0{
     background-image: url('./chapeus/remover.png');
     background-size:contain;
     width: 90px;
@@ -562,6 +595,425 @@ body {
     border: #000 2px solid;
 
 }
+
+#sapato-0{
+    background-image: url('./sapatos/remover.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-1{
+    background-image: url('./sapatos/sapato1.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-2{
+    background-image: url('./sapatos/sapato2.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-3{
+    background-image: url('./sapatos/sapato3.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-4{
+    background-image: url('./sapatos/sapato4.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-5{
+    background-image: url('./sapatos/sapato5.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-6{
+    background-image: url('./sapatos/sapato6.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-7{
+    background-image: url('./sapatos/sapato7.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-8{
+    background-image: url('./sapatos/sapato8.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-9{
+    background-image: url('./sapatos/sapato9.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#sapato-10{
+    background-image: url('./sapatos/sapato10.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#acessorio-0{
+    background-image: url('./acessorios/remover.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#acessorio-1{
+    background-image: url('./acessorios/acessorio1.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-2{
+    background-image: url('./acessorios/acessorio2.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-3{
+    background-image: url('./acessorios/acessorio3.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-4{
+    background-image: url('./acessorios/acessorio4.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-5{
+    background-image: url('./acessorios/acessorio5.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-6{
+    background-image: url('./acessorios/acessorio6.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-7{
+    background-image: url('./acessorios/acessorio7.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer;
+    background-color: transparent; 
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-8{
+    background-image: url('./acessorios/acessorio8.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-9{
+    background-image: url('./acessorios/acessorio9.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#acessorio-10{
+    background-image: url('./acessorios/acessorio10.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-0{
+    background-image: url('./asas/remover.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+}
+
+#asas-1{
+    background-image: url('./asas/asas1.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;   
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-2{
+    background-image: url('./asas/asas2.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-3{
+    background-image: url('./asas/asas3.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-4{
+    background-image: url('./asas/asas4.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-5{
+    background-image: url('./asas/asas5.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-6{
+    background-image: url('./asas/asas6.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer; 
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-7{
+    background-image: url('./asas/asas7.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-8{
+    background-image: url('./asas/asas8.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-9{
+    background-image: url('./asas/asas9.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+#asas-10{
+    background-image: url('./asas/asas10.png');
+    background-size:contain;
+    width: 90px;
+    height: 70px;  
+    border: none;
+    cursor: pointer;  
+    background-color: transparent;
+    margin: 2px; 
+    border: #000 2px solid;
+
+}
+
+
+
 
 #lana{
     background-image: url('./botoes/lana.png');
