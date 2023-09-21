@@ -20,8 +20,7 @@
         <img id="asas" src="" class="asas">
         <img id="sapato" src="" class="sapato">
     </div>
-    <button id="cheat" style="position: absolute; margin-left: 40px; margin-top: 10px;">+</button>
-    <button id="menos" style="position: absolute; margin-left: 40px; margin-top: 30px;">_</button>
+
     <img id="acessorio" src="" class="acessorio">
     <div id="loja-container">
         <button id="voltar"></button>
@@ -94,6 +93,12 @@
             <button class="botaoloja" id="asas-9" value="850" disabled></button>
             <button class="botaoloja" id="asas-10" value="900" disabled></button>
         </div>
+        <div id="especiais-container">
+            <button class="botaoloja" id="especiais-0" value="1500" disabled></button>
+            <button class="botaoloja" id="especiais-1" value="2000" disabled></button>
+            <button class="botaoloja" id="especiais-2" value="3000" disabled></button>
+            <button class="botaoloja" id="especiais-3" value="4000" disabled></button>
+        </div>
     </div>
     <div id="pet-container">
         <div id="fezes-container">
@@ -130,9 +135,11 @@
             <button class="button" id="medicar"></button>
             <button class="button" id="banho"></button>
             <button class="button" id="espancar"></button>
-            <button class="button" id="suicidio"></button>
+            <button class="button" id="morrer"></button>
             <button class="button" id="lana"></button>
             <button class="button" id="tyler"></button>
+            <button class="button" id="chico"></button>
+            <button class="button" id="som"></button>
         </div>
         <button id="loja"></button>
         
@@ -154,11 +161,23 @@
         <audio id="audio-espancar">
             <source src="./audios/espancar.mp3" type="audio/mpeg">
         </audio>
-        <audio id="audio-suicidio">
+        <audio id="audio-morrer">
             <source src="./audios/odeioviver.mp3" type="audio/mpeg">
         </audio>
         <audio id="audio-lana">
             <source src="./audios/maciel-cantando-lana.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-tyler">
+            <source src="./audios/tyler.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-chico">
+            <source src="./audios/chico.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-som">
+            <source src="./audios/som.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-tiro">
+            <source src="./audios/tiro.mp3" type="audio/mpeg">
         </audio>
     </div>
     <script src="popup.js"></script>

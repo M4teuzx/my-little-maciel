@@ -5,19 +5,8 @@ const dormirButton = document.getElementById('dormir');
 const banhoButton = document.getElementById('banho');
 const medicarButton = document.getElementById('medicar');
 const espancarButton = document.getElementById('espancar');
-const suicidiobutton = document.getElementById('suicidio');
-const cheatButton = document.getElementById('cheat');
-const menos = document.getElementById('menos');
+const morrerbutton = document.getElementById('morrer');
 
-cheatButton.addEventListener('click', function () {
-    pontos = pontos + 100;
-    atualizarPontos();
-});
-
-menos.addEventListener('click', function () {
-    pontos = pontos - 100;
-    atualizarPontos();
-});
 
 const progressFome = document.getElementById('progress');
 const progressSono = document.getElementById('progress-sono');
@@ -31,8 +20,9 @@ const audioDormir = document.getElementById('audio-dormir');
 const audioBanho = document.getElementById('audio-banho');
 const audioMedicar = document.getElementById('audio-medicar');
 const audioEspancar = document.getElementById('audio-espancar');
-const audioSuicidio = document.getElementById('audio-suicidio');
+const audiomorrer = document.getElementById('audio-morrer');
 const audioinicial = document.getElementById('audio-inicio');
+const audiotiro = document.getElementById('audio-tiro')
 
 const loja = document.getElementById('loja');
 const petcontainer = document.getElementById('pet-container');
@@ -108,6 +98,11 @@ const asas10 = document.getElementById('asas-10');
 const lana = document.getElementById('lana');
 const audiolana = document.getElementById('audio-lana');
 const tyler = document.getElementById('tyler');
+const audiotyler = document.getElementById('audio-tyler');
+const chico = document.getElementById('chico');
+const audiochico = document.getElementById('audio-chico');
+const som = document.getElementById('som');
+const audiosom = document.getElementById('audio-som');
 
 
 // loja //
@@ -329,6 +324,7 @@ function setFundo(classeFundo) {
 
 removechapeu.addEventListener('click', function () {
     petHat.src = './chapeus/nenhum.png';
+    chapeuSelecionado = './chapeus/nenhum.png';
 });
 
 chapeu1.addEventListener('click', function () {
@@ -715,7 +711,6 @@ asas10.addEventListener('click', function () {
     removeeaster();
 });
 
-
 acessorio.addEventListener('click', function () {
     acessorio.classList.add('jump');
     setTimeout(function () {
@@ -738,7 +733,18 @@ function eastereggs(){
         document.getElementById('tyler').style.display = 'inline-block';
     }
     if(chapeuSelecionado == './chapeus/hat6.png'){
-        document.getElementById('suicidio').style.display = 'inline-block';
+        document.getElementById('morrer').style.display = 'inline-block';
+    }
+    if(acessorioSelecionado == './acessorios/acessorio5.png'){
+        document.getElementById('chico').style.display = 'inline-block';
+    }
+    if(acessorioSelecionado == './acessorios/acessorio4.png'){
+        document.getElementById('som').style.display = 'inline-block';
+    }
+    if(acessorioSelecionado == './acessorios/acessorio6.png'){
+        acessorio.addEventListener('click', function () {
+            audiotiro.play();
+        })
     }
 }
 
@@ -749,7 +755,7 @@ function desabilitabotao(){
     banhoButton.disabled = true;
     medicarButton.disabled = true;
     espancarButton.disabled = true;
-    suicidiobutton.disabled = true;
+    morrerbutton.disabled = true;
 }
 
 function habilitabotao(){
@@ -759,7 +765,7 @@ function habilitabotao(){
     banhoButton.disabled = false;
     medicarButton.disabled = false;
     espancarButton.disabled = false;
-    suicidiobutton.disabled = false;
+    morrerbutton.disabled = false;
 }
 
 
@@ -851,12 +857,16 @@ function atualizarBanho() {
 function removeeaster() {
     document.getElementById('lana').style.display = 'none';
     document.getElementById('tyler').style.display = 'none';
-    document.getElementById('suicidio').style.display = 'none';
+    document.getElementById('morrer').style.display = 'none';
+    document.getElementById('chico').style.display = 'none';
+    document.getElementById('som').style.display = 'none';
 }
 
 function atualizarExpressaoPet() {
     if (fome >= 90) {
-        pet.src = './rostos/2.png';
+        pet.src = './rostos/1.png';
+    } else if (fome >= 85){
+    pet.src = "./rostos/2.png"
     } else if (fome >= 80) {
         pet.src = './rostos/3.png';
     } else if (fome >= 70) {
@@ -940,9 +950,9 @@ espancarButton.addEventListener('click', function () {
     audioEspancar.play();
 });
 
-suicidiobutton.addEventListener('click', function () {
-    sematar();
-    audioSuicidio.play();
+morrerbutton.addEventListener('click', function () {
+    morrer();
+    audiomorrer.play();
 });
 
 loja.addEventListener('click', function () {
@@ -964,6 +974,21 @@ lana.addEventListener('click', function () {
     cantar();
 });
 
+tyler.addEventListener('click', function () {
+    audiotyler.play();
+    cantar();
+});
+
+chico.addEventListener('click', function () {
+    audiochico.play();
+    cantar();
+});
+
+som.addEventListener('click', function () {
+    audiosom.play();
+    cantar();
+});
+
 
 let estanaloja = false;
 
@@ -979,7 +1004,7 @@ function backgroundloja() {
 function cantar() {
     acaoEmAndamento = true;
     pet.src = './rostos/cantando.png';
-    habilitabotao();
+    desabilitabotao();
     setTimeout(function () {
         acaoEmAndamento = false;
         pet.src = './rostos/feliz.png';
@@ -1010,7 +1035,7 @@ function aumentarFomeAosPoucos() {
             atualizarExpressaoPet();
             atualizarProgressBar(progressFome, fome);
         }
-    }, 50); 
+    }, 70); 
 }
 
 function diminuirAmorAosPoucos() {
@@ -1020,13 +1045,13 @@ function diminuirAmorAosPoucos() {
             amor = Math.max(amor, 0);
             atualizarProgressBar(progressAmor, amor);
         }
-    }, 50);
+    }, 60);
 }
 
 function diminuirSonoAosPoucos() {
     setInterval(function () {
         if (sono > 0 && !acaoEmAndamento) {
-            sono -= 0.2; 
+            sono -= 0.12; 
             sono = Math.max(sono, 0); 
             atualizarProgressBar(progressSono, sono);
         }
@@ -1054,16 +1079,13 @@ function diminuirBanhoAosPoucos() {
 }
 
 
-function sematar() {
-    saude = -100;
-    sono = -100;
-    fome = +1000;
-    amor = -100;
-    banho = -100;
+function morrer() {
     pet.src = './rostos/morte.png';
     desabilitabotao();
+    acaoEmAndamento = true;
     setTimeout(function () {
         pet.src = './rostos/morte.png';
+        acaoEmAndamento = false;
     }, 9999999999999);
 }
 
