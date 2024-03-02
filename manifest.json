@@ -1,16 +1,20 @@
 {
     "manifest_version": 3,
-    "name": "My Little Maciel",
-    "version": "1.0",
-    "description": "Cuide do seu próprio maciel!",
+    "name": "Meu Pequeno Haubert",
+    "version": "1.0.7",
+    "description": "Cuide do seu próprio Haubert!",
     "permissions": [],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "./rostos/feliz.png"
+            "16": "./icon.png",
+            "48": "./icon.png",
+            "128": "./icon.png"
         }
     },
     "icons": {
-        "16": "./rostos/feliz.png"
+        "16": "./icon.png",
+        "48": "./icon.png",
+        "128": "./icon.png"
     }
 }

@@ -4,7 +4,7 @@ const brincarButton = document.getElementById('brincar');
 const dormirButton = document.getElementById('dormir');
 const banhoButton = document.getElementById('banho');
 const medicarButton = document.getElementById('medicar');
-const espancarButton = document.getElementById('espancar');
+const baterButton = document.getElementById('bater');
 const morrerbutton = document.getElementById('morrer');
 
 
@@ -19,7 +19,7 @@ const audioBrincar = document.getElementById('audio-brincar');
 const audioDormir = document.getElementById('audio-dormir');
 const audioBanho = document.getElementById('audio-banho');
 const audioMedicar = document.getElementById('audio-medicar');
-const audioEspancar = document.getElementById('audio-espancar');
+const audiobater = document.getElementById('audio-bater');
 const audiomorrer = document.getElementById('audio-morrer');
 const audioinicial = document.getElementById('audio-inicio');
 const audiotiro = document.getElementById('audio-tiro')
@@ -100,113 +100,14 @@ const audiolana = document.getElementById('audio-lana');
 const tyler = document.getElementById('tyler');
 const audiotyler = document.getElementById('audio-tyler');
 const chico = document.getElementById('chico');
+let asfiomgrk323 = 0;
 const audiochico = document.getElementById('audio-chico');
 const som = document.getElementById('som');
 const audiosom = document.getElementById('audio-som');
+const tiro = document.getElementById('tiro');
+const bandida = document.getElementById('bandida');
+const audiobandida = document.getElementById('audio-bandida');
 
-
-// loja //
-
-function lojaitens(){
-    if(pontos > 0){
-        removechapeu.disabled = false;
-        acessorio0.disabled = false;
-        asas0.disabled = false;
-        sapato0.disabled = false;
-    }
-    if(pontos > 40){
-        fundo2.disabled = false;
-        chapeu1.disabled = false;   
-    }
-
-    if(pontos > 50){
-        chapeu2.disabled = false;
-        fundo3.disabled = false;
-    }
-    if(pontos > 100){
-        chapeu3.disabled = false;
-        fundo4.disabled = false;
-    }
-    if(pontos > 150){
-        chapeu4.disabled = false;
-        chapeu5.disabled = false;
-        fundo5.disabled = false;
-        sapato1.disabled = false;
-    }
-    if(pontos > 170){
-        acessorio1.disabled = false;
-        chapeu6.disabled = false;
-        fundo6.disabled = false;
-        sapato2.disabled = false;
-    }
-    if(pontos > 200){
-        asas1.disabled = false;
-        acessorio2.disabled = false;
-        sapato3.disabled = false;
-        chapeu7.disabled = false;
-        
-    }
-    if(pontos > 250){
-        sapato4.disabled = false;
-    }
-    if(pontos > 300){
-        asas2.disabled = false;
-        chapeu8.disabled = false;
-    }
-    if(pontos > 350){
-        acessorio3.disabled = false;        
-        fundo7.disabled = false;
-        sapato5.disabled = false;
-
-    }
-    if(pontos > 400){
-        asas3.disabled = false;        
-        fundo8.disabled = false;
-        sapato6.disabled = false;
-
-    }
-    if(pontos > 500){
-        fundo9.disabled = false;
-        asas4.disabled = false;
-        sapato7.disabled = false;
-        acessorio4.disabled = false;
-        chapeu9.disabled = false;
-    }
-    if(pontos > 600){
-        fundo10.disabled = false;
-        asas5.disabled = false;
-        sapato8.disabled = false;
-        acessorio5.disabled = false;
-    }
-    if(pontos > 700){
-        asas6.disabled = false;
-        sapato9.disabled = false;
-        acessorio6.disabled = false;
-    }
-    if(pontos > 750){
-        asas7.disabled = false;
-        sapato10.disabled = false;
-        acessorio7.disabled = false;
-    }
-    if(pontos > 800){
-        asas8.disabled = false;
-        acessorio8.disabled = false;
-        chapeu10.disabled = false;
-    }
-    if(pontos > 850){
-        asas9.disabled = false;
-        acessorio9.disabled = false;
-
-    }
-    if(pontos > 900){
-        asas10.disabled = false;
-    }
-    if(pontos > 1000){
-        acessorio10.disabled = false;
-    }
-
-
-}
 
 const buttons = document.querySelectorAll('.botaoloja');
 
@@ -220,8 +121,6 @@ buttons.forEach((button) => {
   }
 });
 
-
-let pontos = 0;
 let chapeuSelecionado = '';
 let fundoSelecionado = '';
 let sapatoSelecionado = '';
@@ -231,7 +130,7 @@ let asasSelecionado = '';
 
 function verificarRequisitos() {
     if (fome >= 50 && sono >= 50 && amor >= 50 && saude >= 50 && banho >= 50 && !acaoEmAndamento) {
-        pontos++;
+        asfiomgrk323 = asfiomgrk323 + 1;
         atualizarPontos();
     }
 }
@@ -239,11 +138,11 @@ function verificarRequisitos() {
 
 function atualizarPontos() {
     const pontosElement = document.getElementById('pontos');
-    pontosElement.textContent = pontos; 
+    pontosElement.textContent = asfiomgrk323; 
 }
 
 function salvarPontos() {
-    localStorage.setItem('pontos', pontos);
+    localStorage.setItem('ponto', asfiomgrk323);
 }
 
 function salvarfundo() {
@@ -251,9 +150,9 @@ function salvarfundo() {
 }
 
 function carregarPontos() {
-    const pontosSalvos = localStorage.getItem('pontos');
+    const pontosSalvos = localStorage.getItem('ponto');
     if (pontosSalvos !== null) {
-        pontos = parseInt(pontosSalvos);
+        asfiomgrk323 = parseInt(pontosSalvos);
         atualizarPontos();
     }
 
@@ -322,6 +221,107 @@ function setFundo(classeFundo) {
 
 }
 
+function lojaitens(){
+    if(asfiomgrk323 > 0){
+        removechapeu.disabled = false;
+        acessorio0.disabled = false;
+        asas0.disabled = false;
+        sapato0.disabled = false;
+    }
+    if(asfiomgrk323 > 40){
+        fundo2.disabled = false;
+        chapeu1.disabled = false;   
+    }
+
+    if(asfiomgrk323 > 50){
+        chapeu2.disabled = false;
+        fundo3.disabled = false;
+    }
+    if(asfiomgrk323 > 100){
+        chapeu3.disabled = false;
+        fundo4.disabled = false;
+    }
+    if(asfiomgrk323 > 150){
+        chapeu4.disabled = false;
+        chapeu5.disabled = false;
+        fundo5.disabled = false;
+        sapato1.disabled = false;
+    }
+    if(asfiomgrk323 > 170){
+        acessorio1.disabled = false;
+        chapeu6.disabled = false;
+        fundo6.disabled = false;
+        sapato2.disabled = false;
+    }
+    if(asfiomgrk323 > 200){
+        asas1.disabled = false;
+        acessorio2.disabled = false;
+        sapato3.disabled = false;
+        chapeu7.disabled = false;
+        
+    }
+    if(asfiomgrk323 > 250){
+        sapato4.disabled = false;
+    }
+    if(asfiomgrk323 > 300){
+        asas2.disabled = false;
+        chapeu8.disabled = false;
+    }
+    if(asfiomgrk323 > 350){
+        acessorio3.disabled = false;        
+        fundo7.disabled = false;
+        sapato5.disabled = false;
+
+    }
+    if(asfiomgrk323 > 400){
+        asas3.disabled = false;        
+        fundo8.disabled = false;
+        sapato6.disabled = false;
+
+    }
+    if(asfiomgrk323 > 500){
+        fundo9.disabled = false;
+        asas4.disabled = false;
+        sapato7.disabled = false;
+        acessorio4.disabled = false;
+        chapeu9.disabled = false;
+    }
+    if(asfiomgrk323 > 600){
+        fundo10.disabled = false;
+        asas5.disabled = false;
+        sapato8.disabled = false;
+        acessorio5.disabled = false;
+    }
+    if(asfiomgrk323 > 700){
+        asas6.disabled = false;
+        sapato9.disabled = false;
+        acessorio6.disabled = false;
+    }
+    if(asfiomgrk323 > 750){
+        asas7.disabled = false;
+        sapato10.disabled = false;
+        acessorio7.disabled = false;
+    }
+    if(asfiomgrk323 > 800){
+        asas8.disabled = false;
+        acessorio8.disabled = false;
+        chapeu10.disabled = false;
+    }
+    if(asfiomgrk323 > 850){
+        asas9.disabled = false;
+        acessorio9.disabled = false;
+
+    }
+    if(asfiomgrk323 > 900){
+        asas10.disabled = false;
+    }
+    if(asfiomgrk323 > 1000){
+        acessorio10.disabled = false;
+    }
+
+
+}
+
 removechapeu.addEventListener('click', function () {
     petHat.src = './chapeus/nenhum.png';
     chapeuSelecionado = './chapeus/nenhum.png';
@@ -371,6 +371,38 @@ chapeu6.addEventListener('click', function () {
     petHat.src = './chapeus/hat6.png';
     petHat.style.display = 'block';
     chapeuSelecionado = './chapeus/hat6.png';
+    localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
+});
+
+chapeu7.addEventListener('click', function () {
+    petHat.src = './chapeus/hat7.png';
+    petHat.style.display = 'block';
+    chapeuSelecionado = './chapeus/hat7.png';
+    localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
+});
+
+chapeu8.addEventListener('click', function () {
+    petHat.src = './chapeus/hat8.png';
+    petHat.style.display = 'block';
+    chapeuSelecionado = './chapeus/hat8.png';
+    localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
+});
+
+chapeu9.addEventListener('click', function () {
+    petHat.src = './chapeus/hat9.png';
+    petHat.style.display = 'block';
+    chapeuSelecionado = './chapeus/hat9.png';
+    localStorage.setItem('chapeu', chapeuSelecionado);
+    removeeaster();
+});
+
+chapeu10.addEventListener('click', function () {
+    petHat.src = './chapeus/hat10.png';
+    petHat.style.display = 'block';
+    chapeuSelecionado = './chapeus/hat10.png';
     localStorage.setItem('chapeu', chapeuSelecionado);
     removeeaster();
 });
@@ -704,9 +736,9 @@ asas9.addEventListener('click', function () {
 });
 
 asas10.addEventListener('click', function () {
-    asas.src = './asas/asas10.png';
+    asas.src = './asas/asas10.gif';
     asas.style.display = 'block';
-    asasSelecionado = './asas/asas10.png';
+    asasSelecionado = './asas/asas10.gif';
     localStorage.setItem('asas', asasSelecionado);
     removeeaster();
 });
@@ -721,8 +753,16 @@ acessorio.addEventListener('click', function () {
 
 
 
-
-
+function removeeaster() {
+    document.getElementById('lana').style.display = 'none';
+    document.getElementById('tyler').style.display = 'none';
+    document.getElementById('morrer').style.display = 'none';
+    document.getElementById('chico').style.display = 'none';
+    document.getElementById('som').style.display = 'none';
+    document.getElementById('tiro').style.display = 'none';
+    document.getElementById('bater').style.display = 'none';
+    document.getElementById('bandida').style.display = 'none';
+}
 
 
 function eastereggs(){
@@ -742,9 +782,13 @@ function eastereggs(){
         document.getElementById('som').style.display = 'inline-block';
     }
     if(acessorioSelecionado == './acessorios/acessorio6.png'){
-        acessorio.addEventListener('click', function () {
-            audiotiro.play();
-        })
+        document.getElementById('tiro').style.display = 'inline-block';
+    }
+    if(acessorioSelecionado == './acessorios/acessorio1.png'){
+        document.getElementById('bater').style.display = 'inline-block';
+    }
+    if(chapeuSelecionado == './chapeus/hat5.png'){
+        document.getElementById('bandida').style.display = 'inline-block';
     }
 }
 
@@ -754,8 +798,6 @@ function desabilitabotao(){
     dormirButton.disabled = true;
     banhoButton.disabled = true;
     medicarButton.disabled = true;
-    espancarButton.disabled = true;
-    morrerbutton.disabled = true;
 }
 
 function habilitabotao(){
@@ -764,8 +806,6 @@ function habilitabotao(){
     dormirButton.disabled = false;
     banhoButton.disabled = false;
     medicarButton.disabled = false;
-    espancarButton.disabled = false;
-    morrerbutton.disabled = false;
 }
 
 
@@ -805,31 +845,30 @@ function atualizarSaude() {
         pet.src = './rostos/feliz.png';
         saude = 99;
         habilitabotao();
-        }, 3000);
+        }, 2000);
     }
 }
 
-function espancar() {
-    if (saude < 100) {
+function bater() {
         acaoEmAndamento = true;
         let fomeAnterior = fome;
         let amorAnterior = amor;
         let sonoAnterior = sono;
         let banhoAnterior = banho;
-        pet.src = './rostos/espancar.png';
+        pet.src = './rostos/bater.png';
         desabilitabotao();
         setTimeout(function () {
             acaoEmAndamento = false;
             pet.src = './rostos/feliz.png';
-            fome = fomeAnterior + 30;
+            fome = fomeAnterior - 30;
             amor = amorAnterior - 30;
             sono = sonoAnterior - 30;
             banho = banhoAnterior - 30;
             saude = saude - 30;
             habilitabotao();
-        }, 3000);
+        }, 2000);
     }
-}
+
 
 function atualizarBanho() {
     if (banho < 100) {
@@ -849,18 +888,12 @@ function atualizarBanho() {
             sapato.src = sapatoSelecionado;
             banho = 99;
             habilitabotao();
-        }, 5000);
+        }, 2000);
 
     }
 }
 
-function removeeaster() {
-    document.getElementById('lana').style.display = 'none';
-    document.getElementById('tyler').style.display = 'none';
-    document.getElementById('morrer').style.display = 'none';
-    document.getElementById('chico').style.display = 'none';
-    document.getElementById('som').style.display = 'none';
-}
+
 
 function atualizarExpressaoPet() {
     if (fome >= 90) {
@@ -945,9 +978,9 @@ medicarButton.addEventListener('click', function () {
     audioMedicar.play();
 });
 
-espancarButton.addEventListener('click', function () {
-    espancar();
-    audioEspancar.play();
+baterButton.addEventListener('click', function () {
+    bater();
+    audiobater.play();
 });
 
 morrerbutton.addEventListener('click', function () {
@@ -986,9 +1019,21 @@ chico.addEventListener('click', function () {
 
 som.addEventListener('click', function () {
     audiosom.play();
+});
+
+bandida.addEventListener('click', function () {
+    audiobandida.play();
     cantar();
 });
 
+tiro.addEventListener('click', function () {
+    audiotiro.play();
+    acessorio.src = './acessorios/acessorio6-on.png';
+    setTimeout(function () {
+        acessorio.src = './acessorios/acessorio6.png';
+    }, 500
+    );
+});
 
 let estanaloja = false;
 
@@ -1023,19 +1068,19 @@ function dormir() {
         pet.src = './rostos/feliz.png';
         sono = 100;
         habilitabotao();
-    }, 5000);
+    }, 2000);
 }
 
 
 function aumentarFomeAosPoucos() {
     setInterval(function () {
         if (fome > 0 && !acaoEmAndamento) {
-            fome -= 0.2;
+            fome -= 0.3;
             fome = Math.min(fome, 100); 
             atualizarExpressaoPet();
             atualizarProgressBar(progressFome, fome);
         }
-    }, 70); 
+    }, 50); 
 }
 
 function diminuirAmorAosPoucos() {
@@ -1071,7 +1116,7 @@ function diminuirSaudeAosPoucos() {
 function diminuirBanhoAosPoucos() {
     setInterval(function () {
         if (banho > 0 && !acaoEmAndamento) {
-            banho -= 0.3; 
+            banho -= 0.15; 
             banho = Math.max(banho, 0); 
             atualizarProgressBar(progressBanho, banho);
         }
@@ -1096,7 +1141,7 @@ diminuirSaudeAosPoucos();
 diminuirBanhoAosPoucos();
 setInterval(atualizarFezes, 1);
 setInterval(lojaitens, 1);
-setInterval(verificarRequisitos, 1000);
+setInterval(verificarRequisitos, 400);
 setInterval(salvarPontos, 10);
 setInterval(eastereggs, 50);
 setInterval(backgroundloja, 1);
